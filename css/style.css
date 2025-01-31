@@ -230,6 +230,12 @@ line-height: 24px;
 letter-spacing: -0.004em;
 }
 
+
+h2 {
+  letter-spacing: -1;
+}
+
+
 /* === TEXT-ALIGN === */
 .t-center {
   text-align: center;
@@ -268,12 +274,6 @@ letter-spacing: -0.004em;
   height: 395px;
 }
 
-h2 {
-  letter-spacing: -1;
-}
-
-
-
 .image-container {
   position: relative;
   width: 343px;
@@ -282,7 +282,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px auto; /* Centrar la imagen */
+  margin: 20px auto; 
 }
 
 /* Fondo detrás de la imagen */
@@ -290,7 +290,7 @@ h2 {
   position: absolute;
   width: 345px;
   height: 355px;
-  border-radius: 12px;
+  border-radius: 24px;
   top: 0;
   left: 0;
 }
@@ -303,3 +303,4 @@ h2 {
   z-index: 1;
   border-radius: 12px;
 }
+

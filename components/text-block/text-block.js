@@ -6,6 +6,7 @@ class Textblock extends HTMLElement {
 
     async connectedCallback() {
         const title = this.getAttribute("title") || "";
+        const highlightTitle =  this.getAttribute("highlightTitle") || "";
         const typeTitle =  this.getAttribute("typeTitle") || "black";
         const text = this.getAttribute("text") || "";
         const typeText =  this.getAttribute("typeText") || "black";
@@ -18,7 +19,7 @@ class Textblock extends HTMLElement {
 
             this.shadowRoot.innerHTML = `
             <style>${styleSheet}</style>
-            <h1 class="${typeTitle}">${title.replace("[highlight]", `<strong>${highlight}</strong>`)}</h1>
+            <h1 class="${typeTitle}">${title.replace("[highlightTitle]", `<strong>${highlightTitle}</strong>`)}</h1>
             <p class="${typeText}">${text.replace("[highlight]", `<strong>${highlight}</strong>`)}</p>
             `;
         } catch (error) {
