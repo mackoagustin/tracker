@@ -292,7 +292,7 @@ letter-spacing: -0.32px;
 .green-bg-image {
   background-color: var(--green-color) ;
   color: var(--white-color);
-  background-image: url("/assets/images/rain.png"); 
+  background-image: url("./assets/images/rain.png"); 
   background-size: contain;
   background-repeat: no-repeat; 
   background-position: center;  
@@ -300,7 +300,7 @@ letter-spacing: -0.32px;
 
 .background-form {
   background-color: var(--white-color);
-  background-image: url("/assets/images/background-form.png");
+  background-image: url("./assets/images/background-form.png");
   background-size:auto;
   background-repeat: no-repeat; 
   background-position: center; 
@@ -308,7 +308,7 @@ letter-spacing: -0.32px;
 
 .background-hero {
   background-color: var(--white-color);
-  background-image: url("/assets/images/hero-background.png");
+  background-image: url("./assets/images/hero-background.png");
   background-size:auto;
   background-repeat: no-repeat; 
   background-position: center; 
