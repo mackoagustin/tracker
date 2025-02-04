@@ -1,5 +1,4 @@
-class BenefitBlock
- extends HTMLElement {
+class BenefitBlock extends HTMLElement {
     constructor() {
         super();
     }

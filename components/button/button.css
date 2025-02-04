@@ -20,7 +20,13 @@ button {
   
   .fill {
     background: var(--green-color);
-    color: white;
+    color: var(--white-color);
+    border: none;
+  }
+
+  .fill-gs {
+    background:  var(--green-light-color);;
+    color: var(--green-color);
     border: none;
   }
   

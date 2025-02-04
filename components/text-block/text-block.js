@@ -19,7 +19,7 @@ class Textblock extends HTMLElement {
 
             this.shadowRoot.innerHTML = `
             <style>${styleSheet}</style>
-            <h1 class="${typeTitle}">${title.replace("[highlightTitle]", `<strong>${highlightTitle}</strong>`)}</h1>
+            <h1 class="${typeTitle}">${title.replace("[highlightTitle]", `<strong class="regular">${highlightTitle}</strong>`)}</h1>
             <p class="${typeText}">${text.replace("[highlight]", `<strong>${highlight}</strong>`)}</p>
             `;
         } catch (error) {
