@@ -294,7 +294,7 @@ letter-spacing: -0.32px;
   color: var(--white-color);
   /* === local: background-image: url("./assets/images/rain.png");  === */
   background-image: url("https://mackoagustin.github.io/tracker/assets/images/rain.png"); 
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat; 
   background-position: center;  
 }
@@ -303,7 +303,7 @@ letter-spacing: -0.32px;
   background-color: var(--white-color);
   /* === local: background-image: url("./assets/images/background-form.png"); === */
   background-image: url("https://mackoagustin.github.io/tracker/assets/images/background-form.png");
-  background-size:auto;
+  background-size:cover;
   background-repeat: no-repeat; 
   background-position: center; 
 }
@@ -313,7 +313,7 @@ letter-spacing: -0.32px;
   /* === local:  background-image: url("/assets/images/hero-background.png");
  === */
   background-image: url("https://mackoagustin.github.io/tracker/assets/images/hero-background.png");
-  background-size:auto;
+  background-size:cover;
   background-repeat: no-repeat; 
   background-position: center; 
 }
@@ -400,7 +400,8 @@ letter-spacing: -0.32px;
   height: 258px;
   border-radius: 24px;
   top: 90px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
 }
 
