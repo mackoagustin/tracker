@@ -308,7 +308,7 @@ letter-spacing: -0.32px;
 
 .background-hero {
   background-color: var(--white-color);
-  background-image: url("./assets/images/hero-background.png");
+  background-image: url("/tracker/assets/images/hero-background.png");
   background-size:auto;
   background-repeat: no-repeat; 
   background-position: center; 
