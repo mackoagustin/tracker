@@ -10,6 +10,14 @@ button {
     transition: 0.3s ease-in-out;
   }
 
+  button:hover {
+    background-color: #486F34;
+  }
+
+  .big-button {
+    height: 56px;
+  }
+
   .icon {
     display: flex;
     align-items: center;
@@ -29,16 +37,27 @@ button {
     color: var(--green-color);
     border: none;
   }
+
+  .fill-gs:hover {
+    background-color: #93C539;
+    color: var(--green-color);
+    border: none;
+  }
   
   .outline {
-    background: transparent;
+    background: white;
     color: var(--black-color);
-    border: 2px solid var(--green-color);
+    border: 1px solid var(--green-color);
+  }
+
+  
+  .outline:hover {
+    background: white;
+    color: var(--black-color);
+    border: 1px solid #93C539;
   }
   
-  button:hover {
-    opacity: 0.8;
-  }
+  
   
 /* === buttons === */
 .width-f {

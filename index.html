@@ -21,70 +21,74 @@
 <body>
 
 
-  <header class="p-vertical-small p-horizontal-small container-sb b-b">
-    <object type="image/svg+xml" data="assets/icons/tracker_logo_icon.svg" width="40" height="40"></object>
-    <object type="image/svg+xml" data="assets/icons/acordion_menu.svg" width="32" height="32"></object>
+  <header>
+    <nav-bar></nav-bar>
   </header>
 
   <main>
 
     <!-- inicio -->
-    <section class="background-hero pb-7">
-      <div class=" p-beetween-vertical-small p-vertical-small">
-        <icon-text type="container-row" ptype="pl-1 medium small-text " icon="assets/icons/dot_ouline.svg" text="Impulsando el mañana" heightIcon="12" widthIcon="12"></icon-text>
-      </div >
-
-      <div class="p-vertical-small ">
-        <text-block
-          title="La herramienta para agentes inmobiliarios que quieren [highlightTitle]" 
-          highlightTitle="resultados"
-          typeTitle="font-title"
-          text="El sector inmobiliario está viviendo una transformación histórica. La digitalización no solo cambia la manera en que trabajamos, sino que redefine lo que significa liderar. Como Team Leader o Broker, tu desafío es doble: [highlight]" 
-          highlight="abrazar la tecnología mientras preservás la conexión humana."
-          typeText="font-text grey">
-        </text-block>
-
-        <div class="pt-4 ">
-          <custom-button type=" fill width-f" text="Probar TRACKER App"></custom-button>
+    <section class="background-hero pb-7 ">
+      
+      <article class="container-row-desktop hero-width">
+        <div class="p-vertical-small section-text-hero">
+          <div class=" p-beetween-vertical-small section-hero">
+            <icon-text type="container-row" ptype="pl-1 medium small-text " icon="assets/icons/dot_ouline.svg" text="Impulsando el mañana" heightIcon="12" widthIcon="12"></icon-text>
+          </div >
+          <text-block
+            title="La herramienta que simplifica tu forma de trackear" 
+            highlightTitle=""
+            typeTitle="font-title"
+            text="Sabemos que tu tiempo vale, por eso con TRACKER vas a poder cargar tus gestiones con unos simples pasos y al instante, sin la necesidad de usar hojas de cálculo y verificar cada gestión en el momento que lo desees." 
+            highlight="";
+            typeText="font-text grey">
+          </text-block>
+  
+          <div class="pt-4 button-hero ">
+            <custom-button type="button big-button fill width-f" text="Probar TRACKER App"></custom-button>
+          </div>
         </div>
-
         <div class="container-cc">
           <img class="img-phone pt-4 " src="./assets/images/tracker_app_phone1.png" alt="Screenshot imagen tracker app">
-
         </div>
-      </div>
+      </article>
+     
     </section>
 
      <!-- beneficios -->
     <section class=" p-vertical-small pb-2">
 
         <article class="cream-bg">
-          <div class="pt-5 pb-1 p-vertical-small">
+          <div class="pt-5 pb-1 p-vertical-small container-benefit-desktop">
             <div class="container-cc b-b">
               <icon-text type="container-row" icon="assets/icons/dot.svg" text="Beneficios" heightIcon="12" widthIcon="12"></icon-text>
             </div>
-
-            <h1 class="large-text regular t-center pb-3">Con TRACKER, no solo podés adaptarte al cambio:
-               <span class="bold"> podés liderarlo. </span>
-            </h1>
+            <div clas="container-benefit-text">
+              <h1 class="large-text regular t-center pb-3">Con TRACKER, no solo podés adaptarte al cambio: <br>
+                <span class="bold"> podés liderarlo. </span>
+             </h1>
+            </div>
             
-            <benefit-block
-            icon="assets/icons/flash.svg" heightIcon="48" widthIcon="48"
-            title="Visibilidad total del desempeño"
-            text ="Con TRACKER, podés visualizar el rendimiento de cada agente de manera clara y precisa, identificando oportunidades de mejora en tiempo real."
-            ></benefit-block>
-           
-            <benefit-block
-            icon="assets/icons/dot3.svg" heightIcon="48" widthIcon="48"
-            title="Simplificación del trabajo diario"
-            text ="Diseñado para reducir las tareas administrativas, TRACKER permite que vos y tu equipo se enfoquen en lo que más importa: captar propiedades y cerrar ventas."
-            ></benefit-block>
-
-            <benefit-block
-            icon="assets/icons/user.svg" heightIcon="48" widthIcon="48"
-            title="Liderazgo mejorado"
-            text ="Mientras TRACKER recopila y organiza datos, vos podés enfocarte en motivar, guiar y celebrar los logros de tu equipo."
-            ></benefit-block>
+            <div class="container-row-desktop">
+              <benefit-block
+              icon="assets/icons/flash.svg" heightIcon="48" widthIcon="48"
+              title="Visibilidad total del desempeño"
+              text ="Con TRACKER, podés visualizar el rendimiento de cada agente de manera clara y precisa, identificando oportunidades de mejora en tiempo real."
+              ></benefit-block>
+             
+              <benefit-block
+              icon="assets/icons/dot3.svg" heightIcon="48" widthIcon="48"
+              title="Simplificación del trabajo diario"
+              text ="Diseñado para reducir las tareas administrativas, TRACKER permite que vos y tu equipo se enfoquen en lo que más importa: captar propiedades y cerrar ventas."
+              ></benefit-block>
+  
+              <benefit-block
+              icon="assets/icons/user.svg" heightIcon="48" widthIcon="48"
+              title="Liderazgo mejorado"
+              text ="Mientras TRACKER recopila y organiza datos, vos podés enfocarte en motivar, guiar y celebrar los logros de tu equipo."
+              ></benefit-block>
+            </div>
+       
           </div>
         </article>
     </section>
@@ -92,35 +96,38 @@
     <!-- características app-->
     <section class=" p-vertical-small pt-7">
 
-      <article class="pb-8">
+      <article class="pb-8 pt-120">
         <app-section 
           title="Carga de gestiones" 
-          titleType="fh-24 regular" 
+          titleType="fh-24 h2-d regular" 
           text="Cada agente registra sus actividades diarias, como captación de propiedades, visitas y cierres."
-          textType="c-grey light p-16 pb-8"
-          imgSrc="assets/images/app1.png"
+          textType="c-grey light p-16 pb-4 pt-14 "
+          imgSrc="assets/images/app1_desktop.png"
+          imgType = ""
           bgColor="background-shape cream-bg">
           </app-section>
       </article>
      
-      <article>
-        <app-section 
+      <article class="">
+        <app-section-right 
           title="Seguimiento del progreso" 
-          titleType="fh-24 regular" 
-          text="Visualizá cómo se traduce el esfuerzo en resultados concretos: prospectos atendidos, ventas realizadas y más."
-          textType="c-grey light p-16 pb-8"
-          imgSrc="assets/images/app2.png"
+          titleType="fh-24 h2-d regular" 
+          text="En cada reloj podrás ir visualizando tus resultados a lo largo del mes, de esta manera tus gestiones estarán más ordenadas y alineadas a los resultados que esperás."
+          textType="c-grey light p-16 pb-4"
+          imgSrc="assets/images/app2_desktop.png"
+          imgType = ""
           bgColor="background-shape cream-bg">
-         </app-section>
+         </app-section-right>
       </article>
 
-      <article>
+      <article class="">
         <app-section 
           title="Optimización continua" 
-          titleType="fh-24 regular pt-10" 
+          titleType="fh-24 h2-d regular pt-10" 
           text="Analizá los datos para identificar patrones y áreas de mejora, todo en tiempo real."
           textType="c-grey p-16  light"
-          imgSrc="assets/images/app3.png"
+          imgSrc="assets/images/app3_desktop.png"
+          imgType = ""
           bgColor="background-shape cream-bg">
        </app-section>
       </article>
@@ -128,181 +135,170 @@
   
     </section>
 
+    <!--Detrás tracker-->
+      <section class=" p-vertical-small pt-7 pb-10 tab-container">
+        <tabs-preguntas 
+          tab1-text="Quiénes somos" 
+          tab2-text="Qué es TRACKER" 
+          tab3-text="Por qué y para qué" 
+          tab-content1="Somos un equipo de profesionales con más de 10 años de experiencia en el rubro inmobiliario, formando y liderando equipos de agentes especializados en el rubro."
+          tab-content2="Es la herramienta que pensamos y diseñamos en función a la necesidades que todo agente tiene, para que sus gestiones diarias sean más sencillas y eficientes."
+          tab-content3="Porque todo negocio exitoso debe ser medible, no existe el éxito casual, con TRACKER vas a poder medir cada una de tus gestiones para optimizar tiempo con mayor eficiencia a la hora de obtener los resultados que buscás."
+        ></tabs-preguntas>
+      </section>
+
      <!-- precio -->
     <section class="p-vertical-small pt-5">
+      <div class="container-benefit-desktop">
+        <div class="container-cc b-b ">
+          <icon-text type="container-row c-black" icon="assets/icons/dot.svg" text="Planes" heightIcon="12" widthIcon="12"></icon-text>
+        </div>
+        <div class="container-planes-width ">
+          <h2 class="large-text regular t-center c-blac pt-40">Accedé a Tracker desde hoy</h2>
+          <p class="p-16 t-center c-grey thin">Nuestros planes son simples y están diseñados para adaptarse a las necesidades de inmobiliarias de distintos tamaños. Elegí el plan que mejor se ajuste a tus objetivos y presupuesto.</p>
+    
+        </div>
 
-      <div class="container-cc b-b ">
-        <icon-text type="container-row c-black" icon="assets/icons/dot.svg" text="Planes" heightIcon="12" widthIcon="12"></icon-text>
-      </div>
-
-      <h2 class="large-text regular t-center c-blac">Accedé a Tracker desde hoy</h2>
-      <p class="p-16 t-center c-grey thin">Nuestros planes son simples y están diseñados para adaptarse a las necesidades de inmobiliarias de distintos tamaños. Elegí el plan que mejor se ajuste a tus objetivos y presupuesto.</p>
-
-      <price-block
-        backgroundColor = ""
-        title="agente"
-        price="5"
-        text="Para pequeñas inmobiliarias o agentes independientes con necesidades de gestión moderadas."
-        buttonText = "Me interesa"
-        buttonType="outline"
-        buttonIcon="arrow_right.svg"
-      ></price-block>
-
-      <div class="pt-2">
-        <h2 class="medium-large-text medium">Qué incluye</h2>
-        <icon-text type="container-row" pType="pl-1 regular normal-text" icon="assets/icons/check.svg" text="Qué incluye" heightIcon="20" widthIcon="20"></icon-text>
-        <icon-text type="container-row" pType="pl-1 regular normal-text" icon="assets/icons/check.svg" text="Qué incluye" heightIcon="20" widthIcon="20"></icon-text>
-        <icon-text type="container-row" pType="pl-1 regular normal-text"  icon="assets/icons/check.svg" text="Qué incluye" heightIcon="20" widthIcon="20"></icon-text>
+        <article class="container-benefit-desktop pt-5" >
+          <price-block
+            backgroundColor = ""
+            title="Individual"
+            text="Para pequeñas inmobiliarias o agentes independientes con necesidades de gestión moderadas."
+            buttonText="Me interesa"
+            buttonType="outline"
+            buttonIcon="arrow_right.svg"
+            iconCheck ="checkGreen"
+            feature1="Carga de metas y seguimiento."
+            feature2="Visualización de gestiones en tiempo real."
+            feature3="Panel administrativo."
+            feature4="Dashboard con estadísticas."
+          >
+          </price-block>
+          
+          <div class="pt-3">
+            <price-block
+            backgroundColor = "green-bg"
+            title="Equipos"
+            text="Para pequeñas inmobiliarias o agentes independientes con necesidades de gestión moderadas.  "
+            buttonText="Me interesa"
+            inputField="yes"
+            buttonType="fill-gs"
+            buttonIcon="arrow_right.svg"
+            iconCheck ="checkGreenLight"
+            feature1="Carga de metas y seguimiento."
+            feature2="Visualización de gestiones en tiempo real."
+            feature3="Panel administrativo."
+            feature4="Dashboard con estadísticas."
+            >
+          </price-block>
+          </div>
+       
+        </article>
+      
         
       </div>
-
-      <price-block
-        backgroundColor = ""
-        title="Full"
-        price="10"
-        text="Para equipos inmobiliarios más grandes o con mayores requerimientos de gestión."
-        buttonText = "Me interesa"
-        buttonType="outline"
-        buttonIcon="arrow_right.svg"
-      ></price-block>
-
-      <div class="pt-2">
-        <h2 class="medium-large-text medium">Qué incluye</h2>
-        <icon-text type="container-row" pType="pl-1 regular normal-text" icon="assets/icons/check.svg" text="Qué incluye" heightIcon="20" widthIcon="20"></icon-text>
-        <icon-text type="container-row" pType="pl-1 regular normal-text" icon="assets/icons/check.svg" text="Qué incluye" heightIcon="20" widthIcon="20"></icon-text>
-        <icon-text type="container-row" pType="pl-1 regular normal-text"  icon="assets/icons/check.svg" text="Qué incluye" heightIcon="20" widthIcon="20"></icon-text>
-      </div>
-
-      <price-block
-        backgroundColor = "green-bg"
-        title="Premium"
-        price="15"
-        text="Diseñado a medida para brokers o inmobiliarias con operaciones de gran escala y alta demanda de gestión."
-        buttonText = "Me interesa"
-        buttonType="fill-gs"
-        buttonIcon="arrow_right.svg"
-      ></price-block>
-
-      <div class="pt-2">
-        <h2 class="medium-large-text medium">Qué incluye</h2>
-        <icon-text type="container-row" pType="pl-1 regular normal-text" icon="assets/icons/check.svg" text="Qué incluye" heightIcon="20" widthIcon="20"></icon-text>
-        <icon-text type="container-row" pType="pl-1 regular normal-text" icon="assets/icons/check.svg" text="Qué incluye" heightIcon="20" widthIcon="20"></icon-text>
-        <icon-text type="container-row" pType="pl-1 regular normal-text"  icon="assets/icons/check.svg" text="Qué incluye" heightIcon="20" widthIcon="20"></icon-text>
-      </div>
+      
     </section>
 
     <!-- Testimonio -->
-     <section class="p-vertical-small pt-5">
-      <div class="container-cc b-b ">
-        <icon-text type="container-row c-black" icon="assets/icons/dot.svg" text="Testimonios" heightIcon="12" widthIcon="12"></icon-text>
-      </div>
-
-      <h2 class="large-text regular t-center c-blac">Haciendo visible el impacto de tu liderazgo</h2>
-      <p class="p-16 t-center c-grey thin">Tu equipo necesita ver el “para qué” detrás del esfuerzo diario. Con TRACKER, podés transformar la rutina en resultados concretos.</p>
-      
-      <article class="testimony-container pt-5">
-        <div class="testimony-background-shape"></div>
-
-        <div class="testimony-card pt-5 pb-4">
-          <div class="container-cc">
-            <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
-            <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
-            <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
-            <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
-            <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
-          </div>
-
-            <p class="p-16 thin t-center testimony-body pt-24">“Desde que usamos TRACKER, nuestro equipo no solo trabaja más organizado, sino que también logramos un 25% más de cierres en menos tiempo.”</p>
-
-
-          <p class="t-center medium">Victoria Casasco</p>
-          <p class="t-center light">Team Scaglia - Remax</p>
-  
-  
+     <section class="p-vertical-small pt-174">
+      <div class="container-benefit-desktop">
+        <div class="container-cc b-b ">
+          <icon-text type="container-row c-black" icon="assets/icons/dot.svg" text="Testimonios" heightIcon="12" widthIcon="12"></icon-text>
         </div>
-      </article>
+        
+        <div class="container-planes-width">
+          <h2 class="large-text regular t-center c-blac pt-40">Haciendo visible el impacto de tu liderazgo</h2>
+          <p class="p-16 t-center c-grey thin">Tu equipo necesita ver el “para qué” detrás del esfuerzo diario. Con TRACKER, podés transformar la rutina en resultados concretos.</p>
+        </div>
+        
+        <article class="testimony-container pt-5">
+          <div class="testimony-background-shape"></div>
+  
+          <div class="testimony-card pt-5 pb-4">
+            <div class="container-cc">
+              <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
+              <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
+              <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
+              <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
+              <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
+            </div>
+  
+            <p class="p-16 thin t-center testimony-body pt-24 fs-32px ">“Desde que usamos TRACKER, nuestro equipo no solo trabaja más organizado, sino que también logramos un 25% más de cierres en menos tiempo.”</p>
+  
+  
+            <p class="t-center medium">Victoria Casasco</p>
+            <p class="t-center light">Team Scaglia - Remax</p>
+    
+    
+          </div>
+        </article>
+      </div>
      
-     </section>
+     
+    </section>
 
      <!-- donwload app-->
-    <section class="p-vertical-small pt-10 pb-7">
-      <div class="container-col-center green-bg-image pl-4 pr-4 pt-7 br-24 ">
-        <h3 class="regular t-center tw-255 pb-4">Organizá tu éxito inmobiliario desde hoy</h3>
-
-        <div class="wfs pb-6">
-          <custom-button type="fill-gs width-f " text="Descargar TRACKER App"></custom-button>
-
+    <section class="p-vertical-small pt-10 pb-7 ">
+      <div class="">
+        <div class="container-col-center green-bg-image pl-4 pr-4 pt-7 br-24 pt-124x">
+          <h3 class="thin t-center tw-255 pb-4">Organizá tu éxito inmobiliario desde hoy</h3>
+  
+          <div class="wfs pb-6">
+            <custom-button type="fill-gs width-f " text="Descargar TRACKER App"></custom-button>
+          </div>
+  
         </div>
-
       </div>
+     
     </section>
 
     <!-- preguntas frecuentes-->
-    <section class="p-vertical-small">   
-      <faq-list>
-        <faq-item question="¿TRACKER es difícil de usar?">
-            No, TRACKER está diseñado para ser intuitivo y fácil de usar, sin necesidad de conocimientos técnicos avanzados.
-        </faq-item>
-        <faq-item question="¿Cómo beneficia a los agentes individuales?">
-            TRACKER ayuda a los agentes a gestionar mejor su flujo de trabajo, optimizando su tiempo y aumentando sus oportunidades de cierre.
-        </faq-item>
-        <faq-item question="¿Puedo usarlo en equipos grandes?">
-            Sí, TRACKER escala según las necesidades de tu equipo, desde agentes individuales hasta brokers con equipos amplios.
-        </faq-item>
-        <faq-item question="¿Cuentan con un equipo de soporte?">
-            Sí, ofrecemos soporte 24/7 para garantizar que siempre tengas ayuda cuando la necesites.
-        </faq-item>
-      </faq-list>
+    <section class="p-vertical-small">
+      <div class="container-faq">
+        <h2 class=" medium large-text t-center pb-3">Preguntas frecuentes</h2>   
+        <faq-list>
+          <faq-item question="¿TRACKER es difícil de usar?">
+            TRACKER es una herramienta sencilla e intuitiva, fue diseñada y creada para que la facilidad sea uno de sus principales atributos.
+          </faq-item>
+          <faq-item question="¿Cómo beneficia a los agentes individuales?">
+            Al igual que con los planes de Equipos y Empresas, TRACKER te permite llevar un orden en tiempo real de todas las gestiones que cada agente inmobiliario realice, para de esta manera no perder el foco ni la estrategia de tu negocio.
+          </faq-item>
+          <faq-item question="¿Puedo usarlo en equipos grandes?">
+            Si, dependiendo del plan que elijas, ya sea Equipos o Empresas, vas a poder cargar la cantidad de agentes que desees.
+          </faq-item>
+          <faq-item question="¿Cuentan con un equipo de soporte?">
+            Si, contamos con un equipo especializado en cada área de soporte, tanto en pre venta como en post venta. Además, contamos con placas explicativas del paso a paso que requiere la aplicación para cada una de las situaciones que se puedan presentar.
+          </faq-item>
+        </faq-list>
+      </div>
+     
      </section>
 
 
      <!-- form-->
-     <section class="pt-6">
+     <section class="pt-6" id="form-section">
       <article class="p-3 p-vertical-small  background-form">
-        <h2 class="regular">Contactanos</h2>
-        <p class="pt-2 c-grey p-16 regular">Estamos para ayudarte a dar el primer paso para tu crecimiento.</p>
+        <div class="container-row-desktop-ro">
+          <div class="container-benefit-desktop">
+            <h2 class="regular h2-d">Contactanos</h2>
+            <p class="pt-2 c-grey p-16 regular">Estamos para ayudarte a dar el primer paso para tu crecimiento.</p>
 
-        <div class=" p-beetween-vertical-small">
-          <icon-text type="container-row" ptype="pl-1 regular p-16 " icon="assets/icons/mail.svg" text="hola@tracker-realestate.com" heightIcon="20" widthIcon="20"></icon-text>
-        </div >
+            <div class=" p-beetween-vertical-small">
+              <icon-text type="container-row" ptype="pl-1 regular p-16 " icon="assets/icons/mail.svg" text="hola@tracker-realestate.com" heightIcon="20" widthIcon="20"></icon-text>
+            </div >
+            <icon-text type="container-row" ptype="pl-1 regular p-16 " icon="assets/icons/phone.svg" text="11 5555-0000" heightIcon="20" widthIcon="20"></icon-text>
+          </div>
+          <div class="container-form">
+            <form-input></form-input>
+          </div>
+    
+        </div>
         
-        <icon-text type="container-row" ptype="pl-1 regular p-16 " icon="assets/icons/phone.svg" text="11 5555-0000" heightIcon="20" widthIcon="20"></icon-text>
-        
-        <form action="#" method="post" class="form-green-border pb-3 ">
-          <label for="nombre">Nombre</label><br>
-          <input type="text" id="nombre" name="nombre" required><br><br>
-        
-          <label for="empresa">Empresa <span class="c-grey">(opcional)</span></label><br>          <input type="text" id="empresa" name="empresa"><br><br>
-        
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email" required><br><br>
-        
-          <label for="whatsapp">WhatsApp:</label><br>
-          <input type="tel" id="whatsapp" name="whatsapp" required><br><br>
-        
-          <custom-button type="fill width-f" text="Enviar" icon="arrow-tail.svg"></custom-button>
-
-        </form>
 
       </article>
      </section>
-
-     <footer class="green-bg p-vertical-small ">
-      <article class="container-col-center pt-4">
-        <object type="image/svg+xml" data="assets/icons/logo.svg" width="161" height="40"></object>
-
-        <div class="container-cc pt-2 pb-2">
-          <img src="assets/icons/instagram.svg" alt="">
-          <img src="assets/icons/linkedin.svg" alt="" class="pl-2">
-        </div>
-
-        <u>Políticas de Privacidad</u>
-        <p class="t-center small-text">© 2025 TRACKER. Todos los derechos reservados.</p>
-
-      </article>
-   
-
-     </footer>
+    <footer-block></footer-block>
 
 
 

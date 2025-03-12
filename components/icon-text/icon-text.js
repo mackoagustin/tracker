@@ -13,8 +13,8 @@ class IconText extends HTMLElement {
 
         this.innerHTML = `
             <div class = "${type}">
-            <object type="image/svg+xml" data="${icon}" width="${widthIcon}" height="${heightIcon}"></object>
-            <p class="${pType}">${text}</p>
+                <object type="image/svg+xml" data="${icon}" width="${widthIcon}" height="${heightIcon}"></object>
+                <p class="${pType} pl-1" style="margin: 10px">${text}</p>
             </div
         `;
     }

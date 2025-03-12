@@ -1,4 +1,4 @@
-class AppSection extends HTMLElement {
+class AppSectionRight extends HTMLElement {
     constructor() {
         super();
     }
@@ -10,7 +10,6 @@ class AppSection extends HTMLElement {
         const textType = this.getAttribute("textType") || "";
         const imgSrc = this.getAttribute("imgSrc") || "";
         const imgType= this.getAttribute("imgType")
-
         const bgColor = this.getAttribute("bgColor") || "#AEB5B4"; // Color por defecto
 
         const isDesktop = window.matchMedia("(min-width: 768px)").matches;
@@ -27,13 +26,13 @@ class AppSection extends HTMLElement {
         `;
         } else{
          this.innerHTML = `
-         <section class="container-carac-desktop">
-            <div class="container-caract-text">
-                <h2 class="${titleType}">${title}</h2>
-                <p class="${textType}">${text}</p>
+         <section class="container-carac-desktop-right">
+            <div class="image-container">
+                    <img src="${imgSrc}" alt="App screenshot" class="${imgType}">
             </div>
-            <div>
-                <img src="${imgSrc}" alt="App screenshot" class="${imgType}">
+            <div class="container-caract-text">  
+                     <h2 class="${titleType}">${title}</h2>
+                    <p class="${textType}">${text}</p>
             </div>
          </section>
          `
@@ -42,7 +41,7 @@ class AppSection extends HTMLElement {
     }
 }
 
-customElements.define("app-section", AppSection);
+customElements.define("app-section-right", AppSectionRight);
 
 
 
