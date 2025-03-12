@@ -117,7 +117,8 @@ class PriceBlock extends HTMLElement {
         async loadData() {
             try {
                 // local const response = await fetch("../../data/db.json");
-                const response = await fetch("/tracker/data/db.json");
+                const response = await fetch("https://mackoagustin.github.io/tracker/data/db.json");
+
 
                 this.data = await response.json();
             }catch (error) {
