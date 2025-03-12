@@ -565,10 +565,20 @@ input[type="number"]::-webkit-inner-spin-button {
   display: none;
 }
 
-
+.mobile-options {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 91vw;
+}
 
 .tab-container {
   display: block;
+}
+
+.pb-m-2 {
+  padding-bottom: 40px;
 }
 
 .tabs {
@@ -1085,6 +1095,9 @@ color: #ECFCCB;
 
 .pt-174{ padding-top: 174px;}
 
+.pb-m-2 {
+  padding-bottom: 0px; /* O el valor que prefieras */
+}
 }
 
 

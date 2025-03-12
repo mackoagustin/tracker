@@ -32,7 +32,7 @@ class Navbar extends HTMLElement {
                     <img  id="close-menu" src="assets/icons/close.png" width="32" height="32" alt="Close menu">
                 </article>
             </section>
-            <section style="padding: 250px 16px 0px 16px">
+            <section class="mobile-options">
                 <custom-button type="big-button fill width-f" text="Solicitar plan" href="https://web.tracker-realestate.com/subscription"></custom-button>
                 <br>
                 <custom-button type="big-button outline width-f" text="Iniciar sesión" href="https://web.tracker-realestate.com/login"></custom-button>
