@@ -20,7 +20,7 @@ class PriceBlock extends HTMLElement {
                             <p class="pt-2">¿Cuántas personas utilizarían TRACKER?</p>
                             <div class="input-container pb-2">
                                 <img src="assets/icons/user_outline.svg" class="input-icon" alt="icon">
-                                <input type="number" id="peopleInput" value="10" placeholder="Ingrese el número de personas">
+                                <input style="width: 300px" type="number" id="peopleInput" value="10" placeholder="Escribí el número de personas">
                             </div>
                         ` : "";
 
@@ -41,13 +41,19 @@ class PriceBlock extends HTMLElement {
             const feature4 = this.getAttribute("feature4") || "";
 
 
+            // white
+            const hasInputField = this.getAttribute("inputField") === "yes";
+            const textClass = hasInputField ? "medium-text light c-white-color-80" : "medium-text light c-default-color";
+
+
+
             const isDesktop = window.matchMedia("(min-width: 768px)").matches
 
             if(!isDesktop) {
                   this.innerHTML = `
             <div class="wraper-planes ${backgroundColor}">
                 <div style="  max-width: 532px;" class="pb-2">
-                    <h2 class="pt-2 m-0 regular" >${title}</h2>
+                    <h2 class="pt-2 m-0 semi-bold " >${title}</h2>
                     <p class="thin">${text}</p>
                         <div>
                             ${inputField}
@@ -76,12 +82,12 @@ class PriceBlock extends HTMLElement {
                 this.innerHTML = `
                 <div class="wraper-planes ${backgroundColor}">
                     <div style="  max-width: 532px;">
-                        <h2 class="pt-2 m-0 regular" >${title}</h2>
-                        <p class="thin">${text}</p>
+                        <h2 class="pt-2 m-0 semi-bold" >${title}</h2>
+                        <p class="${textClass}" style="line-height: 26px;">${text}</p>
                             <div>
                                 ${inputField}
                             </div>
-                            <div class="price-per-person">
+                            <div class="price-per-person pt-3 pb-3">
                                 <h1 class="xxl-text regular m-0" id="priceValue">u$s 12</h1>
                                 <div class="iva-price">
                                     <p style="margin: 0;">por mes</p>
@@ -90,12 +96,15 @@ class PriceBlock extends HTMLElement {
                             </div>
                         <custom-button text="${buttonText}" type="${buttonType}" icon="${buttonIcon}"></custom-button>
                     </div>
-                    <div class="pt-2">
+                    <div class="pt-2" >
                         <h2 class="medium-large-text medium pb-1">Qué incluye</h2>
-                        <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature1}" heightIcon="20" widthIcon="20"></icon-text>
-                        <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature2}" heightIcon="20" widthIcon="20"></icon-text>
-                        <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature3}" heightIcon="20" widthIcon="20"></icon-text>
-                        <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature4}" heightIcon="20" widthIcon="20"></icon-text>
+                        <div class="pt-1" style="display: flex; flex-direction: column; gap: 8px;">
+                            <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature1}" heightIcon="20" widthIcon="20"></icon-text>
+                            <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature2}" heightIcon="20" widthIcon="20"></icon-text>
+                            <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature3}" heightIcon="20" widthIcon="20"></icon-text>
+                            <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature4}" heightIcon="20" widthIcon="20"></icon-text>
+                        </div>
+                       
                     </div>
                 </div>
                 `;

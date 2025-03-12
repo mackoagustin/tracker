@@ -31,7 +31,7 @@ class AppSectionRight extends HTMLElement {
                     <img src="${imgSrc}" alt="App screenshot" class="${imgType}">
             </div>
             <div class="container-caract-text">  
-                     <h2 class="${titleType}">${title}</h2>
+                    <h2 class="${titleType} pb-2">${title}</h2>
                     <p class="${textType}">${text}</p>
             </div>
          </section>

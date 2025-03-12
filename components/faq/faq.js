@@ -25,16 +25,16 @@ class FAQItem extends HTMLElement {
 
             document.querySelectorAll("faq-item .faq-item").forEach(faq => {
                 faq.classList.remove("active");
-                faq.querySelector(".faq-icon").src = "/assets/icons/plus.svg";
-                // github faq.querySelector(".faq-icon").src = "./assets/icons/plus.svg";
+                // local faq.querySelector(".faq-icon").src = "/assets/icons/plus.svg";
+                faq.querySelector(".faq-icon").src = "./assets/icons/plus.svg";
 
                
             });
 
             if (!isActive) {
                 item.classList.add("active");
-                icon.src = "/assets/icons/less.svg";
-                // github icon.src = "./assets/icons/less.svg";
+                // local icon.src = "/assets/icons/less.svg";
+                icon.src = "./assets/icons/less.svg";
             }
         });
     }

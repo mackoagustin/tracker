@@ -22,6 +22,7 @@ html, body {
   --gray-color: #AEB5B4;
 
   --white-color: #FFFFFF;
+  --white-color-80: #D4D9D6;
 
   --font-thin: 100;
   --font-extra-light: 200;
@@ -237,6 +238,7 @@ html, body {
 .c-green-dark {color: var(--green-dark-color);}
 .c-green-light { color: var(--green-light-color);}
 .c-white-color { color: var(--white-color);}
+.c-white-color-80 { color: var(--white-color-80) }
 
 
 /* === WEIGHT === */
@@ -269,6 +271,8 @@ font-size: 16px;
 line-height: 24px;
 letter-spacing: -0.004em;
 }
+
+
 
 
 h2 {
@@ -749,13 +753,13 @@ a {
 .button-hero {
   max-width: 203px;
 }
-.container-row-desktop {
+/* .container-row-desktop {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
   align-self: stretch;
-}
+} */
 
 .img-phone {
   width: 403px;
@@ -779,8 +783,8 @@ a {
 
 .container-row-desktop{
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+  flex-direction: row;
+  align-items: start;
   align-self: stretch;
   gap: 40px;
   padding-bottom: 104px ;
@@ -898,7 +902,7 @@ h2 {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  padding-bottom: 24px;
+  padding-bottom: 40px;
 }
 .wraper-planes .iva-price{
   display: flex;
