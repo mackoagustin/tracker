@@ -14,9 +14,10 @@ class Tabs extends HTMLElement {
 
 
         const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+
         if(!isDesktop) {
             this.innerHTML = `
-            <div class="green-bg br-24 ">
+            <div class="green-bg br-24" style="height: 430px">
                 <div class="container-cc b-b-green pt-3 container-benefit-desktop ml-2 mr-2 ">
                     <icon-text type="container-row " icon="assets/icons/dot.svg" text="Detrás de TRACKER" heightIcon="12" widthIcon="12"></icon-text>
                 </div>
@@ -31,7 +32,7 @@ class Tabs extends HTMLElement {
 
         } else {
             this.innerHTML = `
-            <div class="green-bg br-24 ">
+            <div class="green-bg br-24 tabs-height">
                 <div class="container-cc b-b-green pt-6 container-benefit-desktop ">
                     <icon-text type="container-row " icon="assets/icons/dot.svg" text="Detrás de TRACKER" heightIcon="12" widthIcon="12"></icon-text>
                 </div>

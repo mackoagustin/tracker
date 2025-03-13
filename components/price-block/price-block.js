@@ -41,11 +41,10 @@ class PriceBlock extends HTMLElement {
             const feature4 = this.getAttribute("feature4") || "";
 
 
-            // white
+            // white color
             const hasInputField = this.getAttribute("inputField") === "yes";
-            const textClass = hasInputField ? "medium-text light c-white-color-80" : "medium-text light c-default-color";
-
-
+            const textClass = hasInputField ? "light c-white-color-80" : "c-default-color";
+            const ivaColor =  hasInputField ? "c-white-color-80" : "c-grey";
 
             const isDesktop = window.matchMedia("(min-width: 768px)").matches
 
@@ -54,7 +53,8 @@ class PriceBlock extends HTMLElement {
             <div class="wraper-planes ${backgroundColor}">
                 <div style="  max-width: 532px;" class="pb-2">
                     <h2 class="pt-2 m-0 semi-bold " >${title}</h2>
-                    <p class="thin">${text}</p>
+                    <p class="${textClass} thin">${text}</p>
+
                         <div>
                             ${inputField}
                         </div>
@@ -62,7 +62,7 @@ class PriceBlock extends HTMLElement {
                             <h1 class="xxl-text regular m-0" id="priceValue">u$s 12</h1>
                             <div class="iva-price">
                                 <p style="margin: 0;">por mes</p>
-                                <p class="c-grey" style="margin: 0;">+ IVA</p>
+                                <p class="${ivaColor}" style="margin: 0;">+ IVA</p>
                             </div>
                         </div>
                          <div class="pt-2 pb-2">
@@ -83,7 +83,7 @@ class PriceBlock extends HTMLElement {
                 <div class="wraper-planes ${backgroundColor}">
                     <div style="  max-width: 532px;">
                         <h2 class="pt-2 m-0 semi-bold" >${title}</h2>
-                        <p class="${textClass}" style="line-height: 26px;">${text}</p>
+                        <p class="${textClass} medium-text" style="line-height: 26px;">${text}</p>
                             <div>
                                 ${inputField}
                             </div>
@@ -91,7 +91,7 @@ class PriceBlock extends HTMLElement {
                                 <h1 class="xxl-text regular m-0" id="priceValue">u$s 12</h1>
                                 <div class="iva-price">
                                     <p style="margin: 0;">por mes</p>
-                                    <p class="c-grey" style="margin: 0;">+ IVA</p>
+                                    <p class="${ivaColor}" style="margin: 0;">+ IVA</p>
                                 </div>
                             </div>
                         <custom-button text="${buttonText}" type="${buttonType}" icon="${buttonIcon}"></custom-button>
