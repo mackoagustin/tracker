@@ -16,6 +16,7 @@
   
     <!-- JavaScript -->
     <script type="module" src="js/app.js" defer></script> 
+
   </head>
   
 <body>
@@ -99,7 +100,7 @@
       <article class="pb-8 pt-120">
         <app-section 
           title="Carga de metas y gestiones" 
-          titleType="fh-24 h2-d regular" 
+          titleType="fh-24 h2-d regular pb-2" 
           text="Cada agente podrá cargar sus metas y registrar sus actividades que irán apareciendo en cada reloj."
           textType="c-grey light p-16 pb-4 pt-14 "
           imgSrc="assets/images/app1_desktop.png"
@@ -123,7 +124,7 @@
       <article class="">
         <app-section 
           title="Optimización continua" 
-          titleType="fh-24 h2-d regular pt-10" 
+          titleType="fh-24 h2-d regular pt-8" 
           text="Analizá los datos para identificar patrones y áreas de mejora, todo en tiempo real."
           textType="c-grey p-16  light"
           imgSrc="assets/images/app3_desktop.png"
@@ -178,7 +179,7 @@
           <div class="pt-3">
             <price-block
             backgroundColor = "green-bg"
-            title="Equipos"
+            title="Equipo"
             text="Para equipos inmobiliarios más grandes o con mayores requerimientos de gestión."
             inputField="yes"
             buttonText="Me interesa"
@@ -201,42 +202,73 @@
     </section>
 
     <!-- Testimonio -->
-     <section class="p-vertical-small pt-174">
+    <section class="p-vertical-small pt-174">
+
       <div class="container-benefit-desktop">
         <div class="container-cc b-b ">
           <icon-text type="container-row c-black" icon="assets/icons/dot.svg" text="Testimonios" heightIcon="12" widthIcon="12"></icon-text>
         </div>
-        
-        <div class="container-planes-width">
-          <h2 class="large-text regular t-center c-blac pt-40">Haciendo visible el impacto de tu liderazgo</h2>
-          <p class="p-16 t-center c-grey thin">Tu equipo necesita ver el “para qué” detrás del esfuerzo diario. Con TRACKER, podés transformar la rutina en resultados concretos.</p>
-        </div>
-        
-        <article class="testimony-container pt-5">
-          <div class="testimony-background-shape"></div>
-  
-          <div class="testimony-card pt-5 pb-4">
-            <div class="container-cc">
-              <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
-              <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
-              <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
-              <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
-              <object type="image/svg+xml" data="assets/icons/star.svg" width="24" height="24"></object>
-            </div>
-  
-            <p class="p-16 thin t-center testimony-body pt-24 fs-32px ">“Desde que usamos TRACKER, nuestro equipo no solo trabaja más organizado, sino que también logramos un 25% más de cierres en menos tiempo.”</p>
-  
-  
-            <p class="t-center medium pt-4">Victoria Casasco</p>
-            <p class="t-center light">Team Scaglia - Remax</p>
-    
-    
+
+        <div class="scroll-flex">
+
+          <div class="container-planes-width">
+            <h2 class="large-text regular t-center c-blac pt-40">Haciendo visible el impacto de tu liderazgo</h2>
+            <p class="p-16 t-center c-grey thin">Tu equipo necesita ver el “para qué” detrás del esfuerzo diario. Con TRACKER, podés transformar la rutina en resultados concretos.</p>
           </div>
-        </article>
+          
+            <!-- desktop -->
+          <div class="scroll-container-button" >
+            <img src="./assets/icons/arrow-left.svg" alt="" id="arrow-lef">
+            <div class="scroll-container">
+              <div class="scroll-content">
+                <testimonial-block
+                text="“Con TRACKER logramos identificar dónde nos estábamos trabando a la hora de hacer circular nuestro negocio, ahora podemos hacer un seguimiento diario y nuestro negocio empezó a fluir de manera constante, esto hizo que podamos lograr más captaciones y reservas en menos tiempo!”"
+                image="./assets/images/image_testimony_1.png"
+                name="Bruno Larroque"
+                role="Team Leader - Remax Suma"
+                >
+                </testimonial-block>
+                <testimonial-block
+                text="“TRACKER fue la solución que no estábamos encontrando para cargar nuestras gestiones diarias de manera sencilla y en el momento”"
+                image="./assets/images/image_testimony_2.png"
+                name="Gonzalo Martos"
+                role="Team Leader - Remax Suma"
+                >
+                </testimonial-block>
+              </div>
+            </div>        
+            <img src="./assets/icons/arrow-right.svg" alt="" id="arrow-right">
+  
+          </div>
+
+
+            <!-- mobile -->
+
+            <div class="scroll-container scroll-mobile">
+              <div class="scroll-content">
+                <testimonial-block
+                text="“Con TRACKER logramos identificar dónde nos estábamos trabando a la hora de hacer circular nuestro negocio, ahora podemos hacer un seguimiento diario y nuestro negocio empezó a fluir de manera constante, esto hizo que podamos lograr más captaciones y reservas en menos tiempo!”"
+                image="./assets/images/image_testimony_1.png"
+                name="Bruno Larroque"
+                role="Team Leader - Remax Suma"
+                >
+                </testimonial-block>
+                <testimonial-block
+                text="“TRACKER fue la solución que no estábamos encontrando para cargar nuestras gestiones diarias de manera sencilla y en el momento”"
+                image="./assets/images/image_testimony_2.png"
+                name="Gonzalo Martos"
+                role="Team Leader - Remax Suma"
+                >
+                </testimonial-block>
+              </div>
+            </div> 
+        
+        </div>
       </div>
-     
-     
     </section>
+
+
+    
 
      <!-- donwload app-->
     <section class="p-vertical-small pt-10 pb-7 ">
@@ -265,8 +297,7 @@
             Al igual que con los planes de Equipos y Empresas, TRACKER te permite llevar un orden en tiempo real de todas las gestiones que cada agente inmobiliario realice, para de esta manera no perder el foco ni la estrategia de tu negocio.
           </faq-item>
           <faq-item question="¿Puedo usarlo en equipos grandes?">
-            Si, dependiendo del plan que elijas, ya sea Equipos o Empresas, vas a poder cargar la cantidad de agentes que desees.
-          </faq-item>
+            Si, con el plan Equipo vas a poder cargar la cantidad de agentes que desees.          </faq-item>
           <faq-item question="¿Cuentan con un equipo de soporte?">
             Si, contamos con un equipo especializado en cada área de soporte, tanto en pre venta como en post venta. Además, contamos con placas explicativas del paso a paso que requiere la aplicación para cada una de las situaciones que se puedan presentar.
           </faq-item>
@@ -296,9 +327,9 @@
             </div >
             <icon-text 
               type="container-row pb-m-2" 
-              ptype="pl-1 regular p-16 " 
-              icon="assets/icons/phone.svg" 
-              text="11 5555-0000" 
+              ptype="pl- regular p-16 " 
+              icon="assets/icons/ws.svg" 
+              text="(+54 9) 11 3485-3087" 
               heightIcon="20" 
               widthIcon="20">
             </icon-text>

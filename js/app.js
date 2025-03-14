@@ -10,3 +10,27 @@ import "../components/tabs/tabs.js";
 import "../components/nav-bar/nav-bar.js";
 import "../components/form/form.js";
 import "../components/footer/footer.js"
+import "../components/testimonial/testimonial.js"
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollContent = document.querySelector('.scroll-content');
+    const arrowLeft = document.getElementById('arrow-lef');
+    const arrowRight = document.getElementById('arrow-right');
+    const cardWidth = document.querySelector('testimonial-block').offsetWidth + 100; // Ancho de la tarjeta + gap
+    let currentPosition = 0;
+  
+    arrowRight.addEventListener('click', function() {
+      if (currentPosition < scrollContent.scrollWidth - scrollContent.offsetWidth) {
+        currentPosition += cardWidth;
+        scrollContent.style.transform = `translateX(-${currentPosition}px)`;
+      }
+    });
+  
+    arrowLeft.addEventListener('click', function() {
+      if (currentPosition > 0) {
+        currentPosition -= cardWidth;
+        scrollContent.style.transform = `translateX(-${currentPosition}px)`;
+      }
+    });
+  });

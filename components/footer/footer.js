@@ -11,7 +11,7 @@ class FooterBlock extends HTMLElement {
             this.innerHTML = `
             <footer class="green-bg p-vertical-small pb-2 ">
                 <article class="container-col-center pt-4">
-                    <object type="image/svg+xml" data="assets/icons/logo.svg" width="161" height="40"></object>
+                    <object type="image/svg+xml" data="assets/images/logo_footer.svg" width="161" height="40"></object>
 
                     <div class="container-cc pt-2 pb-2">
                     <a href="https://www.instagram.com/tracker.realestate?igsh=amNjdHI1NWQ0bTky" target="_blank" rel="noopener noreferrer">
@@ -32,8 +32,7 @@ class FooterBlock extends HTMLElement {
         } else {
             this.innerHTML = `
             <footer class="green-bg p-vertical-small pb-2 ">
-                <article class="container-row-space pt-5" style="max-width: 1560px;
-  margin: 0 auto;">
+                <article class="container-row-space pt-5" style="max-width: 1560px; margin: 0 auto;">
                     <div class="container-row" style="gap: 32px">
                         <object type="image/svg+xml" data="assets/icons/tracker_logo_icon.svg" width="40" height="40"></object>
                         <object type="image/svg+xml" data="assets/icons/line.svg" height="32"></object>
