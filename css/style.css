@@ -727,7 +727,7 @@ display: none;
   flex-direction: row;
   justify-content: flex-start;
   gap: 100px;
- overflow-x: auto;
+  overflow-x: auto;
   scroll-behavior: smooth; 
   padding: 38px 10px 80px 10px
 }
@@ -742,7 +742,9 @@ display: none;
   align-items: center;
 }
 
-
+.scroll-desktop {
+  display: none !important;
+}
 
 
 
@@ -969,7 +971,7 @@ h2 {
 
 .testimony-card {
   width: 800px;
-min-height: 460px ;
+  min-height: 460px ;
 }
 
 .testimony-background-shape {
@@ -1168,9 +1170,8 @@ color: #ECFCCB;
   flex-direction: row;
   justify-content: flex-start;
   gap: 100px;
- /*  overflow-x: auto;
-  scroll-behavior: smooth; */
-  padding: 80px 50px 80px 60px
+  padding: 80px 50px 80px 60px;
+
 }
 
 .scroll-content::-webkit-scrollbar {
@@ -1198,7 +1199,13 @@ color: #ECFCCB;
 
 
 
+.swiffy-slider .slider-nav::after {
+  display: none !important;
+}
 
+.scroll-desktop {
+  display: block !important;
+}
 
 }
 

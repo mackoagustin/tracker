@@ -16,7 +16,8 @@
   
     <!-- JavaScript -->
     <script type="module" src="js/app.js" defer></script> 
-
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
   </head>
   
 <body>
@@ -217,29 +218,81 @@
           </div>
           
             <!-- desktop -->
-          <div class="scroll-container-button" >
+        <!--   <div class="scroll-container-button" >
             <img src="./assets/icons/arrow-left.svg" alt="" id="arrow-left">
             <div class="scroll-container">
               <div class="scroll-content">
-                <testimonial-block
+                <div>
+                  <testimonial-block
+                id="testimonial-1"
                 text="“Con TRACKER logramos identificar dónde nos estábamos trabando a la hora de hacer circular nuestro negocio, ahora podemos hacer un seguimiento diario y nuestro negocio empezó a fluir de manera constante, esto hizo que podamos lograr más captaciones y reservas en menos tiempo!”"
                 image="./assets/images/image_testimony_1.png"
                 name="Bruno Larroque"
                 role="Team Leader - Remax Suma"
                 >
                 </testimonial-block>
-                <testimonial-block
+                </div>
+                <div>
+                  <testimonial-block
+                idTestimonial="testimonial-2"
                 text="“TRACKER fue la solución que no estábamos encontrando para cargar nuestras gestiones diarias de manera sencilla y en el momento”"
                 image="./assets/images/image_testimony_2.png"
                 name="Gonzalo Martos"
                 role="Team Leader - Remax Suma"
                 >
                 </testimonial-block>
+                </div>
+                
               </div>
             </div>        
             <img src="./assets/icons/arrow-right.svg" alt="" id="arrow-right">
   
+          </div> -->
+
+
+        <!-- desktop -->
+          <div class="swiffy-slider slider-nav-dark slider-nav-visible  scroll-desktop">
+            <ul class="slider-container">
+                <li>
+                   <testimonial-block
+                    text="“Con TRACKER logramos identificar dónde nos estábamos trabando a la hora de hacer circular nuestro negocio, ahora podemos hacer un seguimiento diario y nuestro negocio empezó a fluir de manera constante, esto hizo que podamos lograr más captaciones y reservas en menos tiempo!”"
+                    image="./assets/images/image_testimony_1.png"
+                    name="Bruno Larroque"
+                    role="Team Leader - Remax Suma"
+                    >
+                    </testimonial-block>
+                </li>
+                <li>
+                  <testimonial-block
+                  idTestimonial="testimonial-2"
+                  text="“TRACKER fue la solución que no estábamos encontrando para cargar nuestras gestiones diarias de manera sencilla y en el momento”"
+                  image="./assets/images/image_testimony_2.png"
+                  name="Gonzalo Martos"
+                  role="Team Leader - Remax Suma"
+                  >
+                  </testimonial-block>
+             
+                </li>
+            </ul>
+        
+            <button type="button" class="slider-nav">
+              <img src="./assets/icons/arrow-left.svg" alt="Prev" id="arrow-left">
+          </button>
+          <button type="button" class="slider-nav slider-nav-next">
+              <img src="./assets/icons/arrow-right.svg" alt="Next" id="arrow-right">
+          </button>
+          
+        
+            <div class="slider-indicators">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+            </div>
           </div>
+         
+         
+
+
 
 
             <!-- mobile -->

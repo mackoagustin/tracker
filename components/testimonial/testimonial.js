@@ -8,11 +8,12 @@ class Testimonial extends HTMLElement {
             const text = this.getAttribute("text") || "" ;
             const image =  this.getAttribute("image") || "";
             const name = this.getAttribute("name") || "";
-            const role =  this.getAttribute("role") || ""
+            const role =  this.getAttribute("role") || "";
+            const idTestimonial = this.getAttribute('idTestimonial');
             this.innerHTML = `
                 <article class="testimony-container pt-5">
                     <div class="testimony-background-shape"></div>
-                        <div class="testimony-card pt-5 pb-5">
+                        <div class="testimony-card pt-5 pb-5" id="${idTestimonial}"    >
                             <p class="p-16 thin t-center testimony-body pt-24 fs-32px ">${text}</p>
                             <div class="pt-4 testimonial-flex">
                             <img src="${image}" height="70" width="70" alt="">
