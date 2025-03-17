@@ -15,7 +15,7 @@ class Navbar extends HTMLElement {
         <section class="header-desktop">
             <article class="p-vertical-small p-horizontal-small b-b"> 
                 <div class="container-carac-space">
-                    <img src="assets/images/logo_webpng.png" alt="Logo tracker">
+                    <img src="assets/images/logo_webpng.png" alt="Logo tracker" height="48px" width= "130px">
                     <div class="container-sb-gap16">
                         <custom-button type="outline width-f" text="Iniciar sesión"  href="https://web.tracker-realestate.com/login"></custom-button>
                         <custom-button type="fill width-f" text="Solicitar plan" href="https://web.tracker-realestate.com/subscription"></custom-button>
