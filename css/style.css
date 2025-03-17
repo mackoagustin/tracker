@@ -562,6 +562,7 @@ input[type="submit"] {
 }
 #peopleInput {
   font-size: 16px;
+  color: var(--black-color);
 }
 
 input[type="number"]::-webkit-outer-spin-button,
