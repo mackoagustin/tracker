@@ -408,16 +408,19 @@ letter-spacing: -0.32px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 24px;
 
 }
 
 .testimony-card {
+  margin-top: 0px;
+  padding-top: 24px;
   background-color: var(--white-color);
   border-radius: 24px ;
   border:2px solid #EBF2EF;
   margin: 0 16px;
   width: 311px;
-  height: 490px;
+  height: 410px;
 }
 
 
@@ -746,6 +749,16 @@ display: none;
   display: none !important;
 }
 
+
+.slider-indicators li {
+  background-color: rgb(213, 146, 244) ; /* Para verificar si se aplica el estilo */
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.scroll-mob {
+  display: block !important;
+}
 
 
 /* scroll horizontal en mobile */
@@ -1207,6 +1220,9 @@ color: #ECFCCB;
   display: block !important;
 }
 
+.scroll-mob {
+  display: none !important;
+}
 }
 
 
