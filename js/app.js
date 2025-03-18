@@ -15,11 +15,14 @@ import "../components/testimonial/testimonial.js"
 document.addEventListener("DOMContentLoaded", function () {
     let userAgent = navigator.userAgent || navigator.vendor || window.opera;
     let downloadLink = document.getElementById("download-link");
+    let downloadApp = document.getElementById("download-app");
 
     if (/android/i.test(userAgent)) {
         downloadLink.href = "https://play.google.com/store/apps/details?id=com.trackingapp.app";
+        downloadApp.href = "https://play.google.com/store/apps/details?id=com.trackingapp.app";
     }
     if (/iPad|iPhone|iPod|Macintosh/.test(userAgent) && !window.MSStream) {
         downloadLink.href = "https://apps.apple.com/ar/app/tracker-real-state/id6502788419?l=en-GB";
+        downloadApp.href = "https://apps.apple.com/ar/app/tracker-real-state/id6502788419?l=en-GB";
     }
 });
