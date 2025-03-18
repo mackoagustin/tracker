@@ -161,7 +161,9 @@ html, body {
 .pl-9 { padding-left: 90px; }
 .pl-10 { padding-left: 100px; }
 
-
+a {
+  text-decoration: none;
+}
 .p-vertical-small {
   padding-left: 16px;
   padding-right: 16px;
