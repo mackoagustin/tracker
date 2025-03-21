@@ -5,7 +5,7 @@ class Form extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-            <form action="#" method="post" class="form-green-border pb-3 ">
+            <form action="https://formspree.io/f/mjkyyppl method="post" class="form-green-border pb-3 ">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>
                 <span class="error-message" id="error-nombre"></span><br><br>
