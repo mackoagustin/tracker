@@ -20,7 +20,7 @@ class PriceBlock extends HTMLElement {
                             <p class="pt-2">¿Cuántas personas utilizarían TRACKER?</p>
                             <div class="input-container pb-2">
                                 <img src="assets/icons/user_outline.svg" class="input-icon" alt="icon">
-                                <input style="width: 300px" type="number" id="peopleInput" value="10" placeholder="Escribí el número de personas">
+                                <input style="width: 300px" type="number" id="peopleInput" ${backgroundColor === "green-bg" ? "" : "value=\"10\""} placeholder="Escribí el número de personas">
                             </div>
                         ` : "";
 
@@ -59,7 +59,7 @@ class PriceBlock extends HTMLElement {
                             ${inputField}
                         </div>
                         <div class="price-per-person">
-                            <h1 class="xxl-text regular m-0" id="priceValue">u$s 12</h1>
+                            <h1 class="xxl-text regular m-0" id="priceValue">${backgroundColor === "green-bg" ? "u$s -" : "u$s 12"}</h1>
                             <div class="iva-price">
                                 <p style="margin: 0;">por mes</p>
                                 <p class="${ivaColor}" style="margin: 0;">+ IVA</p>
@@ -88,7 +88,7 @@ class PriceBlock extends HTMLElement {
                                 ${inputField}
                             </div>
                             <div class="price-per-person pt-3 pb-3">
-                                <h1 class="xxl-text regular m-0" id="priceValue">u$s 12</h1>
+                                <h1 class="xxl-text regular m-0" id="priceValue">${backgroundColor === "green-bg" ? "u$s -" : "u$s 12"}</h1>
                                 <div class="iva-price">
                                     <p style="margin: 0;">por mes</p>
                                     <p class="${ivaColor}" style="margin: 0;">+ IVA</p>
@@ -118,7 +118,7 @@ class PriceBlock extends HTMLElement {
             this.querySelector("custom-button")?.addEventListener("click", this.scrollToForm);
 
            
-            if (inputField) {
+            if (inputField && backgroundColor !== "green-bg") {
                 this.updatePrice(10);  
             }  
         }
