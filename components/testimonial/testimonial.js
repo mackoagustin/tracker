@@ -10,6 +10,7 @@ class Testimonial extends HTMLElement {
             const name = this.getAttribute("name") || "";
             const role =  this.getAttribute("role") || "";
             const idTestimonial = this.getAttribute('idTestimonial');
+            const textClass = this.getAttribute("textClass") || "";
 
             const isDesktop = window.matchMedia("(min-width: 768px)").matches;
             if(!isDesktop){
@@ -17,7 +18,7 @@ class Testimonial extends HTMLElement {
                 <article class="testimony-container pt-5">
                     <div class="testimony-background-shape"></div>
                         <div class="testimony-card pt-5 pb-5" id="${idTestimonial}"    >
-                            <p class="p-16 thin t-center testimony-body  fs-32px ">${text}</p>
+                            <p class="${textClass}">${text}</p>
                             <div class="pt-4 testimonial-flex">
                             <img src="${image}" height="70" width="70" alt="">
                             <p class="medium-large-text m-0 ">${name}</p>
@@ -31,7 +32,7 @@ class Testimonial extends HTMLElement {
                 <article class="testimony-container pt-5">
                     <div class="testimony-background-shape"></div>
                         <div class="testimony-card pt-5 pb-5" id="${idTestimonial}"    >
-                            <p class="p-16 thin t-center testimony-body pt-24 fs-32px ">${text}</p>
+                            <p class="${textClass}">${text}</p>
                             <div class="pt-4 testimonial-flex">
                             <img src="${image}" height="70" width="70" alt="">
                             <p class="medium-large-text m-0 ">${name}</p>

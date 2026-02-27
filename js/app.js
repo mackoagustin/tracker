@@ -2,8 +2,11 @@ import "../components/button/button.js";
 import "../components/text-block/text-block.js";
 import "../components/icon-text/icon-text.js";
 import "../components/benefit-block/benefit-block.js";
+import "../components/benefit-block-v2/benefit-block-v2.js";
 import "../components/app-section/app-section.js";
 import "../components/app-section-right/app-section-right.js"
+import "../components/ap-section-slot/app-section-slot.js"
+import "../components/app-section-slot-right/app-section-slot-right.js"
 import "../components/price-block/price-block.js";
 import "../components/faq/faq.js";
 import "../components/tabs/tabs.js";
@@ -11,6 +14,7 @@ import "../components/nav-bar/nav-bar.js";
 import "../components/form/form.js";
 import "../components/footer/footer.js"
 import "../components/testimonial/testimonial.js"
+import "../components/role-list/role-list.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     let userAgent = navigator.userAgent || navigator.vendor || window.opera;

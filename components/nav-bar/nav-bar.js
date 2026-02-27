@@ -18,7 +18,7 @@ class Navbar extends HTMLElement {
                     <img src="assets/images/logo_webpng.png" alt="Logo tracker" height="48px" width= "auto">
                     <div class="container-sb-gap16">
                         <custom-button type="outline width-f" text="Iniciar sesión"  href="https://web.tracker-realestate.com/login"></custom-button>
-                        <custom-button type="fill width-f" text="Solicitar plan" href="https://web.tracker-realestate.com/subscription"></custom-button>
+                        <custom-button type="fill width-f" text="Solicitar plan" href="#form-section"></custom-button>
                     </div>
                 </div>
             </article>
@@ -33,7 +33,7 @@ class Navbar extends HTMLElement {
                 </article>
             </section>
             <section class="mobile-options">
-                <custom-button type="big-button fill width-f" text="Solicitar plan" href="https://web.tracker-realestate.com/subscription"></custom-button>
+                <custom-button type="big-button fill width-f" text="Solicitar plan" href="#form-section"></custom-button>
                 <br>
                 <custom-button type="big-button outline width-f" text="Iniciar sesión" href="https://web.tracker-realestate.com/login"></custom-button>
             </section>
@@ -54,6 +54,10 @@ class Navbar extends HTMLElement {
         const menuIcon = this.querySelector("#menu-icon");
         const mobileMenu = this.querySelector("#mobile-menu");
         const closeMenu = this.querySelector("#close-menu");
+        const mobilePlanBtn =  this.querySelector (
+            '#mobile-menu custom-button[href="#form-section"]'
+
+        )
     
         menuIcon.addEventListener("click", () => {
             mobileMenu.classList.add("active");
@@ -64,6 +68,11 @@ class Navbar extends HTMLElement {
             mobileMenu.classList.remove("active");
             document.body.classList.remove("no-scroll"); // Restaurar scroll
         });
+
+        mobilePlanBtn.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+            document.body.classList.remove("no-scroll");
+        })
     }
 }
 

@@ -6,22 +6,46 @@ class Form extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <form action="https://formspree.io/f/mjkyyppl" method="post" class="form-green-border pb-3">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <span class="error-message" id="error-nombre"></span><br><br>
+                
+                <div class="container-form-input">
+                    <label for="nombre">Nombre y apellido</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span class="error-message" id="error-nombre"></span>
+                </div>
 
-                <label for="empresa">Empresa  <span class="c-grey">(opcional)</span></label>
-                <input type="text" id="empresa" name="empresa"><br><br>
+                <div class="container-form-input">  
+                    <label for="empresa">Inmobiliaria</label>
+                    <input type="text" id="empresa" name="empresa" required>
+                    <span class="error-message" id="error-empresa"></span>
+                </div>
+
+                <div class="container-form-input">
+                    <label for="rol">Rol (Agente, Líder, Broker, Asistente)</label>
+                    <input type="text" id="rol" name="rol" required>
+                    <span class="error-message" id="error-rol"></span>
+                </div>
                 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                <span class="error-message" id="error-email"></span><br><br>
+                <div class="container-form-input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="error-email"></span>
+                </div>
                 
-                <label for="whatsapp">WhatsApp</label>
-                <input type="tel" id="whatsapp" name="whatsapp" required>
-                <span class="error-message" id="error-whatsapp"></span><br><br>
+                <div class="container-form-input">
+                    <label for="whatsapp">Telefono</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" required>
+                    <span class="error-message" id="error-whatsapp"></span>
+                </div>
+
+                <div class="container-form-input">
+                    <label for="equipo">Cantidad de personas en el equipo</label>
+                    <input type="tel" id="equipo" name="equipo" required>
+                    <span class="error-message" id="error-equipo"></span>
+                </div>
                 
+                <div style="margin-top: 24px">
                 <custom-button id="submit-btn" type="fill width-f" text="Enviar" icon="arrow-tail.svg"></custom-button>
+                </div>
             </form>
 
             <style>
@@ -49,12 +73,18 @@ class Form extends HTMLElement {
 
     validationForm() {
         const nombre = this.querySelector("#nombre");
+        const empresa = this.querySelector("#empresa");
+        const rol = this.querySelector("#rol");
         const email = this.querySelector("#email");
         const whatsapp = this.querySelector("#whatsapp");
+        const equipo = this.querySelector("#equipo");
 
         const errorNombre = this.querySelector("#error-nombre");
+        const errorEmpresa = this.querySelector("#error-empresa");
+        const errorRol = this.querySelector("#error-rol");
         const errorEmail = this.querySelector("#error-email");
         const errorWhatsapp = this.querySelector("#error-whatsapp");
+        const errorEquipo = this.querySelector("#error-equipo");
 
         let isValid = true;
 
@@ -68,6 +98,30 @@ class Form extends HTMLElement {
             errorNombre.textContent = "";
             errorNombre.style.display = "none"; 
             nombre.classList.remove("input-error");
+        }
+
+        // Validar empresa
+        if (empresa.value.trim() === "") {
+            errorEmpresa.textContent = "La inmobiliaria es obligatoria";
+            errorEmpresa.style.display = "block";
+            empresa.classList.add("input-error");
+            isValid = false;
+        } else {
+            errorEmpresa.textContent = "";
+            errorEmpresa.style.display = "none";
+            empresa.classList.remove("input-error");
+        }
+
+        // Validar rol
+        if (rol.value.trim() === "") {
+            errorRol.textContent = "El rol es obligatorio";
+            errorRol.style.display = "block";
+            rol.classList.add("input-error");
+            isValid = false;
+        } else {
+            errorRol.textContent = "";
+            errorRol.style.display = "none";
+            rol.classList.remove("input-error");
         }
 
         // Validar email
@@ -103,6 +157,18 @@ class Form extends HTMLElement {
             errorWhatsapp.textContent = "";
             errorWhatsapp.style.display = "none";
             whatsapp.classList.remove("input-error");
+        }
+
+        // Validar equipo
+        if (equipo.value.trim() === "") {
+            errorEquipo.textContent = "La cantidad de personas es obligatoria";
+            errorEquipo.style.display = "block";
+            equipo.classList.add("input-error");
+            isValid = false;
+        } else {
+            errorEquipo.textContent = "";
+            errorEquipo.style.display = "none";
+            equipo.classList.remove("input-error");
         }
 
         if (isValid) {

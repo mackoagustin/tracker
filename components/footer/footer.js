@@ -24,7 +24,10 @@ class FooterBlock extends HTMLElement {
                 
 
                     <a href="https://s3.us-east-1.amazonaws.com/public.tracker/tracker-real-estate_TerminosCondiciones.pdf" target="_blank">Políticas de Privacidad</a>
-                    <p class="t-center small-text">© 2025 TRACKER. Todos los derechos reservados.</p>
+                    <p class="t-center small-text">© TRACKER Real Estate – Todos los derechos reservados.</p>
+
+                    <a href="https://junodstudio.com/" target="_blank" rel="noopener noreferrer" class="m-0 small-text pt-05" style="color: #C9FF7F">Juno Design Studio</a>
+
 
                 </article>
             </footer>
@@ -36,7 +39,11 @@ class FooterBlock extends HTMLElement {
                     <div class="container-row" style="gap: 32px">
                         <object type="image/svg+xml" data="assets/icons/tracker_logo_icon.svg" width="40" height="40"></object>
                         <object type="image/svg+xml" data="assets/icons/line.svg" height="32"></object>
-                        <p class="normal-text">© 2025 TRACKER. Todos los derechos reservados.</p>
+                        
+                        <div>
+                            <p class="light m-0">© TRACKER Real Estate – Todos los derechos reservados.</p>
+                            <a href="https://junodstudio.com/" target="_blank" rel="noopener noreferrer" class="m-0 small-text pt-05" style="color: #C9FF7F">Juno Design Studio</a>
+                        </div>
 
                     </div>
 

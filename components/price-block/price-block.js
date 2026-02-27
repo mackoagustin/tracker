@@ -31,7 +31,7 @@ class PriceBlock extends HTMLElement {
 
             //check
             const checkGreen = "assets/icons/check.svg";
-            const checkGreenLight = "assets/icons/check_green_light.svg";
+            const checkGreenLight = "assets/icons/check_green_light_80.svg";
             const iconCheck =  this.getAttribute("iconCheck") === "checkGreen" ? checkGreen : checkGreenLight;
 
             //feature
@@ -66,7 +66,7 @@ class PriceBlock extends HTMLElement {
                             </div>
                         </div>
                          <div class="pt-2 pb-2">
-                            <h2 class="medium-large-text medium">Qué incluye</h2>
+                            <h2 class="medium-large-text thin">Qué incluye</h2>
                             <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature1}" heightIcon="20" widthIcon="20"></icon-text>
                             <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature2}" heightIcon="20" widthIcon="20"></icon-text>
                             <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature3}" heightIcon="20" widthIcon="20"></icon-text>
@@ -97,7 +97,7 @@ class PriceBlock extends HTMLElement {
                         <custom-button text="${buttonText}" type="${buttonType}" icon="${buttonIcon}"></custom-button>
                     </div>
                     <div class="pt-2" >
-                        <h2 class="medium-large-text medium pb-1">Qué incluye</h2>
+                        <h2 class="medium-large-text thin pb-1">Qué incluye</h2>
                         <div class="pt-1" style="display: flex; flex-direction: column; gap: 8px;">
                             <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature1}" heightIcon="20" widthIcon="20"></icon-text>
                             <icon-text type="container-row" pType="pl-1 regular normal-text" icon="${iconCheck}" text="${feature2}" heightIcon="20" widthIcon="20"></icon-text>
