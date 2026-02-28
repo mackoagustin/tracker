@@ -289,7 +289,10 @@ line-height: 24px;
 letter-spacing: -0.004em;
 }
 
-
+.fs-16-32 {
+  font-size: 16px;
+  line-height: 19px
+}
 
 
 h2 {
@@ -375,6 +378,14 @@ letter-spacing: -0.32px;
   font-size: 45px;
 }
 
+.pb-download {
+  padding-bottom: 40px;
+}
+
+.pt-download {
+  padding-top: 40px;
+}
+
 
 /* === radius === */
 .br-24 {
@@ -437,8 +448,7 @@ letter-spacing: -0.32px;
   margin: 0 16px;
   width: 311px;
   height: 440px;
--webkit-box-shadow: 0px 6px 5px -1px #A3A3A3; 
-box-shadow: 0px 6px 5px -px #A3A3A3;
+  box-shadow: rgba(194, 193, 193, 0.1) 0px 20px 12px -5px, rgba(0, 0, 0, 0.04) 0px 0px 0px 0px;
 }
 
 
@@ -479,7 +489,7 @@ box-shadow: 0px 6px 5px -px #A3A3A3;
   padding: 1rem;
   border-radius: 24px ;
   border:2px solid #EBF2EF;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
   margin-bottom: 24px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -794,6 +804,9 @@ display: none;
   display: none !important;
 }
 
+.pb-download {
+  padding-bottom: 8px;
+}
 
 .slider-indicators li {
   background-color: rgb(213, 146, 244) ; /* Para verificar si se aplica el estilo */
@@ -808,6 +821,13 @@ display: none;
 .benefit-block-v2 {
   width: 310px;
   gap: 40px;
+}
+
+/* Indicadores inactivos en verde; librería usa invert + opacity */
+.scroll-mob .slider-indicators li:not(.active) {
+  background-color: #D2F072 !important;
+  opacity: 1 !important;
+  filter: none !important;
 }
 
 @media (max-width: 767px) {
@@ -918,6 +938,11 @@ display: none;
   margin: 0 auto;
 }
 
+.fs-16-32 {
+  font-size: 24px;
+  line-height: 29px
+}
+
 .large-text {
   font-size: 2.5rem; /* 40px */
 }
@@ -984,6 +1009,14 @@ text-decoration-skip-ink: none;
   align-items: center;
   margin: 0 auto;
   gap: 80px;
+}
+
+.pb-download {
+  padding-bottom: 60px;
+}
+
+.pt-download {
+  padding-top: 70px;
 }
 
 .container-carac-space {
@@ -1116,11 +1149,11 @@ h2 {
 }
 .tw-255  {
   width: 957px;
-font-size: 76px;
-line-height: 80px;
-letter-spacing: -0.03em;
-text-align: center;
-}
+  font-size: 76px;
+  line-height: 80px;
+  letter-spacing: -0.03em;
+  text-align: center;
+  }
 
 .wfs {
   width: 230px;
@@ -1362,6 +1395,10 @@ color: #ECFCCB;
 
 .desktop {
   display: block;
+}
+
+.pb-download {
+  padding-bottom: 40px;
 }
 
 
