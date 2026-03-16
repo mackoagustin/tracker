@@ -772,6 +772,11 @@ display: none;
   display: none;
 }
 
+.mobile-top-icon {
+  display: flex;
+  justify-content: center;
+}
+
 /* Contenedor del scroll */
 .scroll-container {
   overflow: hidden;

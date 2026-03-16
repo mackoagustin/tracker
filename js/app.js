@@ -17,16 +17,28 @@ import "../components/testimonial/testimonial.js"
 import "../components/role-list/role-list.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-    let userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    let downloadLink = document.getElementById("download-link");
-    let downloadApp = document.getElementById("download-app");
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Puede haber múltiples anchors con el mismo id (mobile y desktop),
+    // así que actualizamos todos los que existan.
+    const downloadLinks = document.querySelectorAll("#download-link");
+    const downloadApps = document.querySelectorAll("#download-app");
+
+    const setHref = (elements, href) => {
+        elements.forEach(el => {
+            if (el) el.href = href;
+        });
+    };
 
     if (/android/i.test(userAgent)) {
-        downloadLink.href = "https://play.google.com/store/apps/details?id=com.trackingapp.app";
-        downloadApp.href = "https://play.google.com/store/apps/details?id=com.trackingapp.app";
+        const playUrl = "https://play.google.com/store/apps/details?id=com.trackingapp.app";
+        setHref(downloadLinks, playUrl);
+        setHref(downloadApps, playUrl);
     }
+
     if (/iPad|iPhone|iPod|Macintosh/.test(userAgent) && !window.MSStream) {
-        downloadLink.href = "https://apps.apple.com/ar/app/tracker-real-state/id6502788419?l=en-GB";
-        downloadApp.href = "https://apps.apple.com/ar/app/tracker-real-state/id6502788419?l=en-GB";
+        const iosUrl = "https://apps.apple.com/ar/app/tracker-real-state/id6502788419?l=en-GB";
+        setHref(downloadLinks, iosUrl);
+        setHref(downloadApps, iosUrl);
     }
 });
