@@ -57,7 +57,7 @@
             <custom-button type="button big-button fill width-f" text="Descarga la app"></custom-button>
           </a>
           <br>
-          <a id="tracker-es-para-ti" href="#como-funciona">
+          <a id="tracker-es-para-ti" style="cursor: pointer;" onclick="scrollToSection(event, 'como-funciona')">
             <custom-button type="button big-button outline width-f" text="Conoce cómo funciona"></custom-button>
           </a>
         </div>
@@ -91,7 +91,7 @@
             <a id="download-app">
               <custom-button type="button big-button fill width-162" text="Descarga la app"></custom-button>
             </a>
-            <a id="tracker-es-para-ti" href="#como-funciona2">
+            <a id="tracker-es-para-ti" style="cursor: pointer;" onclick="scrollToSection(event, 'como-funciona2')">
               <custom-button type="button big-button outline width-216" text="Conoce cómo funciona"></custom-button>
             </a>
           </div>
@@ -653,5 +653,18 @@
     <footer-block></footer-block>
     
   </main>
+
+  <script>
+    function scrollToSection(event, sectionId) {
+      event.preventDefault(); // Esto evita que la URL cambie
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth', // Desplazamiento suave
+          block: 'start'      // Alinea al inicio de la sección
+        });
+      }
+    }
+    </script>
 </body>
 </html>
