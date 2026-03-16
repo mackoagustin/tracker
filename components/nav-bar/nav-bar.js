@@ -7,7 +7,7 @@ class Navbar extends HTMLElement {
         this.innerHTML = `
         <section class="header-mobile">
             <article class="p-vertical-small p-horizontal-small container-sb b-b">
-                <object type="image/svg+xml" data="assets/icons/tracker_logo_icon.svg" width="40" height="40"></object>
+                <img src="assets/images/logo_webpng.png" alt="Logo tracker" height="34px" width= "auto">
                 <img id="menu-icon" src="assets/icons/acordion_menu.svg" width="32" height="32" alt="Menu">
             </article>
         </section>
@@ -28,7 +28,7 @@ class Navbar extends HTMLElement {
         <div id="mobile-menu" class="menu-mobile">
             <section class="header-mobile">
                 <article class="p-vertical-small p-horizontal-small container-sb b-b ">
-                    <object type="image/svg+xml" data="assets/icons/tracker_logo_icon.svg" width="40" height="40"></object>
+                    <img src="assets/images/logo_webpng.png" alt="Logo tracker" height="34px" width= "auto">
                     <img  id="close-menu" src="assets/icons/close.png" width="32" height="32" alt="Close menu">
                 </article>
             </section>
