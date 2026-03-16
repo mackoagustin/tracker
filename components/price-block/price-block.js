@@ -30,7 +30,7 @@ class PriceBlock extends HTMLElement {
             const buttonIcon = this.getAttribute("buttonIcon") || "";
 
             //check
-            const checkGreen = "assets/icons/check.png";
+            const checkGreen = "assets/icons/check.svg";
             const checkGreenLight = "assets/icons/check_green_light_80.svg";
             const iconCheck =  this.getAttribute("iconCheck") === "checkGreen" ? checkGreen : checkGreenLight;
 
