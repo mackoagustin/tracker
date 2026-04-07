@@ -1,0 +1,57 @@
+name: Deploy Static Site to AWS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+
+    env:
+      AWS_REGION: ${{ secrets.AWS_REGION }}
+      S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+      CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Validate deployment configuration
+        run: |
+          test -n "$AWS_REGION"
+          test -n "$S3_BUCKET_NAME"
+          test -n "$CLOUDFRONT_DISTRIBUTION_ID"
+
+      - name: Sync site to S3
+        run: |
+          aws s3 sync . "s3://$S3_BUCKET_NAME" \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude ".DS_Store" \
+            --exclude "assets/.DS_Store" \
+            --exclude "README.md"
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" \
+            --paths "/*"
