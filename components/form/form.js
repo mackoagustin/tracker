@@ -172,6 +172,14 @@ class Form extends HTMLElement {
         }
 
         if (isValid) {
+            // --- META PIXEL: Evento Contact en formulario ---
+            if (typeof fbq === "function") {
+                fbq("track", "Contact", {
+                    content_name: "contact_form",
+                    content_category: "form_submit"
+                });
+            }
+            // --- FIN META PIXEL ---
             alert("Formulario enviado correctamente 🎉");
             this.querySelector("form").submit();
         }

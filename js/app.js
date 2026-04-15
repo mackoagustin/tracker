@@ -30,6 +30,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
 
+    // --- META PIXEL: Evento Lead en botones de descarga ---
+    const allDownloadButtons = document.querySelectorAll("#download-app, #download-link");
+    allDownloadButtons.forEach(el => {
+        el.addEventListener("click", function () {
+            if (typeof fbq === "function") {
+                fbq("track", "Lead", {
+                    content_name: "download_app",
+                    content_category: "app_download"
+                });
+            }
+        });
+    });
+    // --- FIN META PIXEL ---
+
     if (/android/i.test(userAgent)) {
         const playUrl = "https://play.google.com/store/apps/details?id=com.trackingapp.app";
         setHref(downloadLinks, playUrl);
